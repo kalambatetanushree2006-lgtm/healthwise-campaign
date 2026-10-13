@@ -123,7 +123,7 @@ $("feedbackForm").addEventListener("submit", async (event) => {
 async function getData() {
   if (!db) return {quizzes:localRead("hw_quizzes"), feedback:localRead("hw_feedback")};
   const [qRes,fRes] = await Promise.all([
-    db.from("quiz_responses").select("score,total,created_at").order("created_at",{ascending:false}).limit(1000),
+    db.from("quiz_responses").select("score,total_questions,created_at").order("created_at",{ascending:false}).limit(1000),
     db.from("feedback_responses").select("rating,useful_topic,comment,created_at,consent").eq("consent",true).order("created_at",{ascending:false}).limit(1000)
   ]);
   if(qRes.error) throw qRes.error;
