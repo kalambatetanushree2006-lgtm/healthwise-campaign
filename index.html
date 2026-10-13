@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student-led health awareness campaign with quizzes, resources and community feedback.">
+  <title>HealthWise | Health Awareness Campaign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> Small healthy choices can make a big difference.</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HealthWise home"><span class="brand-icon">✚</span><span>Health<span class="brand-green">Wise</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="navLinks">
+      <a href="#learn">Learn</a><a href="#quiz">Health quiz</a><a href="#feedback">Feedback</a><a href="#dashboard">Impact dashboard</a>
+    </nav>
+    <a class="nav-cta" href="#quiz">Take the quiz <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> HEALTH AWARENESS CAMPAIGN</div>
+        <h1>Better health<br>starts with <span>you.</span></h1>
+        <p class="hero-intro">Simple information. Healthier habits. A stronger community. Explore practical wellness tips, test your knowledge and help us understand what matters to you.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#learn">Explore health tips <span>→</span></a><a class="button button-light" href="#quiz">Take a quick quiz</a></div>
+        <div class="hero-note"><span class="avatar-stack"><i>♥</i><i>+</i><i>✓</i></span><span>Learn together. Live healthier.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Health and wellness illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card card-top"><span class="mini-icon">✦</span><div><strong>Daily wellness</strong><small>One step at a time</small></div></div>
+        <div class="health-illustration">
+          <div class="sun"></div><div class="leaf leaf-a"></div><div class="leaf leaf-b"></div>
+          <div class="person-head"></div><div class="person-body"></div><div class="person-arm"></div>
+          <div class="heart-bubble">♥</div><div class="plus-bubble">+</div>
+        </div>
+        <div class="art-card card-bottom"><span class="check-icon">✓</span><div><strong>Healthy habits</strong><small>Build them daily</small></div></div>
+        <div class="floating-star">✳</div>
+      </div>
+    </section>
+
+    <section class="stats-strip section-wrap" aria-label="Campaign statistics">
+      <div class="stat-item"><span class="stat-icon">◉</span><div><strong id="heroParticipants">0</strong><span>Quiz participants</span></div></div>
+      <div class="stat-item"><span class="stat-icon">♡</span><div><strong id="heroFeedback">0</strong><span>Feedback responses</span></div></div>
+      <div class="stat-item"><span class="stat-icon">✦</span><div><strong id="heroRating">—</strong><span>Average campaign rating</span></div></div>
+      <div class="stat-message">Your voice helps make health information more useful for everyone.</div>
+    </section>
+
+    <section class="section-wrap content-section" id="learn">
+      <div class="section-heading"><div><div class="eyebrow">KNOWLEDGE FOR EVERYDAY LIFE</div><h2>Little habits, <span>lasting impact.</span></h2></div><p>Start with simple steps you can practise in your everyday routine.</p></div>
+      <div class="topic-grid">
+        <article class="topic-card topic-mint"><div class="topic-symbol">🥗</div><span class="topic-tag">NUTRITION</span><h3>Eat a balanced diet</h3><p>Include a variety of fruits, vegetables, whole grains and protein sources. Drink water regularly.</p><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Explore nutrition <span>↗</span></a></article>
+        <article class="topic-card topic-lilac"><div class="topic-symbol">🏃</div><span class="topic-tag">MOVEMENT</span><h3>Keep your body moving</h3><p>Choose activities you enjoy, such as walking, cycling, dancing or playing a sport.</p><a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" target="_blank" rel="noopener">Explore activity <span>↗</span></a></article>
+        <article class="topic-card topic-peach"><div class="topic-symbol">🧼</div><span class="topic-tag">HYGIENE</span><h3>Make hygiene a habit</h3><p>Wash hands with soap and water, especially before eating and after using the toilet.</p><a href="https://www.who.int/health-topics/hand-hygiene" target="_blank" rel="noopener">Explore hygiene <span>↗</span></a></article>
+        <article class="topic-card topic-blue"><div class="topic-symbol">🌿</div><span class="topic-tag">WELL-BEING</span><h3>Care for your mind</h3><p>Make time for rest, connect with people you trust and seek professional support when needed.</p><a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener">Explore well-being <span>↗</span></a></article>
+      </div>
+      <p class="health-disclaimer">Educational information only; it does not replace advice from a qualified healthcare professional.</p>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="section-wrap quiz-layout">
+        <div class="quiz-intro"><div class="eyebrow eyebrow-light">LEARN BY PLAYING</div><h2>How health-wise<br>are you?</h2><p>Answer these five quick questions and see what you know. Your completed quiz will contribute to the campaign's participant count.</p><div class="quiz-perks"><span>✓ 5 quick questions</span><span>✓ Instant score</span><span>✓ Helpful explanations</span></div></div>
+        <div class="quiz-panel" id="quizPanel">
+          <div class="quiz-panel-head"><span class="quiz-label">HEALTH KNOWLEDGE CHECK</span><span class="question-counter" id="questionCounter">Question 1 of 5</span></div>
+          <div class="progress-track"><div id="quizProgress"></div></div>
+          <form id="quizForm">
+            <div id="questionArea"></div>
+            <div class="quiz-controls"><button type="button" class="button button-light" id="prevQuestion" disabled>← Back</button><button type="button" class="button button-primary" id="nextQuestion">Next question →</button><button type="submit" class="button button-primary hidden" id="submitQuiz">Submit quiz ✓</button></div>
+          </form>
+          <div id="quizResult" class="quiz-result hidden" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap feedback-section" id="feedback">
+      <div class="feedback-copy"><div class="eyebrow">YOUR OPINION MATTERS</div><h2>Help us make<br>health <span>easier to learn.</span></h2><p>Tell us what you thought about this campaign. Your response will be added to the feedback dashboard.</p><div class="feedback-points"><div><span>01</span><p><strong>Share honestly</strong><br>Your suggestions help improve future awareness activities.</p></div><div><span>02</span><p><strong>Stay private</strong><br>Please don't include personal medical details or sensitive information.</p></div></div></div>
+      <form class="feedback-form" id="feedbackForm">
+        <div class="form-top"><span class="form-icon">✉</span><div><h3>Campaign feedback</h3><p>It takes less than a minute.</p></div></div>
+        <label for="feedbackName">Name <span class="optional">(optional)</span></label><input id="feedbackName" name="name" maxlength="60" placeholder="What should we call you?">
+        <label>How would you rate this campaign? <span class="required">*</span></label>
+        <div class="rating-options" role="radiogroup" aria-label="Campaign rating">
+          <label><input type="radio" name="rating" value="1" required><span>★</span><small>1</small></label>
+          <label><input type="radio" name="rating" value="2"><span>★</span><small>2</small></label>
+          <label><input type="radio" name="rating" value="3"><span>★</span><small>3</small></label>
+          <label><input type="radio" name="rating" value="4"><span>★</span><small>4</small></label>
+          <label><input type="radio" name="rating" value="5"><span>★</span><small>5</small></label>
+        </div>
+        <label for="feedbackUseful">What did you find most useful? <span class="required">*</span></label><select id="feedbackUseful" name="useful" required><option value="">Choose one</option><option>Nutrition tips</option><option>Physical activity</option><option>Hygiene information</option><option>Mental well-being</option><option>Health quiz</option><option>All of the above</option></select>
+        <label for="feedbackComment">Suggestions or comments <span class="optional">(optional)</span></label><textarea id="feedbackComment" name="comment" maxlength="500" rows="3" placeholder="What could we improve?"></textarea>
+        <label class="consent-row"><input type="checkbox" id="feedbackConsent" required><span>I agree that my response may be displayed anonymously in the campaign results. <span class="required">*</span></span></label>
+        <button class="button button-primary full-width" id="feedbackSubmit" type="submit">Send feedback <span>→</span></button>
+        <p class="form-message" id="feedbackMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="dashboard-section" id="dashboard">
+      <div class="section-wrap">
+        <div class="section-heading dashboard-heading"><div><div class="eyebrow">COMMUNITY IMPACT</div><h2>Our campaign, <span>in numbers.</span></h2></div><p>Live results update as people submit quizzes and feedback.</p></div>
+        <div id="connectionNotice" class="connection-notice">Demo mode: results are stored only in this browser. Connect Supabase to share real responses across devices.</div>
+        <div class="dashboard-stats">
+          <div class="dashboard-stat"><span class="dashboard-stat-icon green">◉</span><span class="dashboard-label">Quiz participants</span><strong id="dashParticipants">0</strong><small>Completed quizzes</small></div>
+          <div class="dashboard-stat"><span class="dashboard-stat-icon purple">✓</span><span class="dashboard-label">Average quiz score</span><strong id="dashScore">—</strong><small>Out of 5 questions</small></div>
+          <div class="dashboard-stat"><span class="dashboard-stat-icon orange">♡</span><span class="dashboard-label">Feedback responses</span><strong id="dashFeedback">0</strong><small>Community submissions</small></div>
+          <div class="dashboard-stat"><span class="dashboard-stat-icon blue">★</span><span class="dashboard-label">Average rating</span><strong id="dashRating">—</strong><small>Out of 5 stars</small></div>
+        </div>
+        <div class="dashboard-columns">
+          <div class="dashboard-card"><div class="dashboard-card-head"><div><h3>What people found useful</h3><p>Feedback topic selections</p></div><span class="card-mini-icon">▥</span></div><div id="topicBreakdown" class="bar-list"><p class="empty-state">Responses will appear here after feedback is submitted.</p></div></div>
+          <div class="dashboard-card"><div class="dashboard-card-head"><div><h3>Community feedback</h3><p>Recent comments shared with consent</p></div><span class="card-mini-icon">☰</span></div><div id="feedbackList" class="feedback-list"><p class="empty-state">Be the first to share feedback.</p></div></div>
+        </div>
+        <p class="dashboard-footnote">Only real submissions are counted. Demo data is stored locally until you connect a shared database. Feedback names are not shown in the public results.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-icon">✚</span><span>Health<span class="brand-green">Wise</span></span></a><p>Awareness today. Healthier choices tomorrow.</p><span>Student project · Health awareness campaign</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
