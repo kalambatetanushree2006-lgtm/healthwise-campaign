@@ -4,8 +4,8 @@
   SHARED MODE: add your Supabase project URL and anon/publishable key below,
   then run supabase.sql in your Supabase SQL Editor.
 */
-const SUPABASE_URL = ""; // Example: https://YOUR_PROJECT.supabase.co
-const SUPABASE_ANON_KEY = ""; // Supabase publishable/anon key only. NEVER put a service_role key here.
+const SUPABASE_URL = "https://eurryltgkmqvbocnehkx.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_9b0tdk1UG8_l4NjCo-08iw_E7Dmapo1";
 const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase);
 
 let db = null;
