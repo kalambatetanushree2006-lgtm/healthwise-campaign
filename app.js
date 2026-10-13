@@ -63,10 +63,12 @@ $("quizForm").addEventListener("submit", async (event) => {
   const result = {score, total:questions.length, answers:[...answers], created_at:new Date().toISOString()};
   try {
     if (db) {
-      const { error } = await db.from("quiz_responses").insert({
+      
+const { error } = await db.from("quiz_responses").insert({
   score: result.score,
   total_questions: result.total
 });
+
       if (error) throw error;
     } else {
       const data = localRead("hw_quizzes"); data.push(result); localWrite("hw_quizzes",data);
